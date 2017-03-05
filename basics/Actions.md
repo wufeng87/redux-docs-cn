@@ -33,7 +33,7 @@ import { ADD_TODO, REMOVE_TODO } from '../actionTypes'
 
 >##### Note on Boilerplate
 
->你不是一定要在单独的文件中定义action type常量，甚至连定义都可以省去。对于一个小项目，可能直接使用字符串字面量的action type更为简单。当然，将action type显示的申明为字符串常量会带来很多好处，尤其是在大的项目中。请移步阅读[Reducing Boilerplate](../recipes/ReducingBoilerplate.md)来获得更多的能使你的代码库简洁的建设性意见。
+>你不是一定要在单独的文件中定义action type常量，甚至连定义都可以省去。对于一个小项目，可能直接使用字符串字面量的action type更为简单。当然，将action type显示的声明为字符串常量会带来很多好处，尤其是在大的项目中。请移步阅读[Reducing Boilerplate](../recipes/ReducingBoilerplate.md)来获得更多的能使你的代码库简洁的建设性意见。
 
 除了`type`属性，action对象的其他数据结构都可以由你自己定义。如果感兴趣，想了解actions的数据结构应当怎么样被组织，可以看看[Flux Standard Action](https://github.com/acdlite/flux-standard-action)。
 
@@ -50,7 +50,7 @@ We'll add one more action type to describe a user ticking off a todo as complete
 }
 ```
 
-需要注意是，我们要尽可能简洁的组织一个action的数据结构。比如这里，我们使用了`index`，而不是用的一整个tod项对象。
+需要注意是，我们要尽可能简洁的组织一个action的数据结构。比如这里，我们使用了`index`，而不是用的一整个todo项对象。
 
 It's a good idea to pass as little data in each action as possible. For example, it's better to pass `index` than the whole todo object.
 
@@ -181,7 +181,7 @@ export function setVisibilityFilter(filter) {
 
 ## Next Steps
 
-下一步我们来一起[定义一些 reducers](Reducers.md)，去看看当action派发后是如何更新state的。
+下一步我们来一起[定义一些 reducers](Reducers.md)，去看看当action被派发(dispatch)后是如何更新state的。
 
 Now let's [define some reducers](Reducers.md) to specify how the state updates when you dispatch these actions!
 
